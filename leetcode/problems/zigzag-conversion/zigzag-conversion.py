@@ -42,13 +42,12 @@ class Solution:
                     count = 1
                     smallap=[s[i]]
                     count2=n-2
-                #print(smallap)
-        #print(count)
-        if count>=1 and len(s)%(n+(n-2))!=0 and len(s)>(n+(n-2)):
+
+        if count>=1:
         
-            #print("$$$")
+
             bigap.append(smallap)
-        #print(bigap)
+
 
         for i in range(0,n):
             for j in bigap:
