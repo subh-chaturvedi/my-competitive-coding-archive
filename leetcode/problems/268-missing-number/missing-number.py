@@ -6,6 +6,4 @@ class Solution:
 
         shouldbe= x*(x+1)/2
 
-        y=shouldbe-sumed
-
-        return int(y)
+        return int(shouldbe-sumed)
