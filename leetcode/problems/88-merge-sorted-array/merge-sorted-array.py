@@ -14,7 +14,7 @@ class Solution:
         nums1[:] = nums1[:-len(nums2)]
 
         while k<x:
-            print(k,index1,index2,nums1,nums2)
+            #print(k,index1,index2,nums1,nums2)
             if k==len(nums1):
                 nums1[:]=nums1+nums2[index2:]
                 break    
