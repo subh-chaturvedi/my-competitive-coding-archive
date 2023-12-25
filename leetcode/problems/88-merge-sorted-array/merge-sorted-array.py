@@ -1,13 +1,30 @@
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
-        a, b, write_index = m-1, n-1, m + n - 1
+        
+        if nums2 == []:
+            return
 
-        while b >= 0:
-            if a >= 0 and nums1[a] > nums2[b]:
-                nums1[write_index] = nums1[a]
-                a -= 1
+        index1=0
+        index2=0
+
+        k=0
+
+        x=len(nums1)
+
+        nums1[:] = nums1[:-len(nums2)]
+
+        while k<x:
+            print(k,index1,index2,nums1,nums2)
+            if k==len(nums1):
+                nums1[:]=nums1+nums2[index2:]
+                break    
+            if nums1[index1] <= nums2[index2]:
+                k+=1
+                index1+=1
             else:
-                nums1[write_index] = nums2[b]
-                b -= 1
-
-            write_index -= 1
+                nums1.insert(k,nums2[index2])
+                k+=1
+                index1+=1
+                index2+=1
+                if index2==len(nums2):
+                    return
