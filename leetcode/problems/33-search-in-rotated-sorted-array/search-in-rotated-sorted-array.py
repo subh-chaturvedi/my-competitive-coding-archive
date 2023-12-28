@@ -1,6 +1,6 @@
 class Solution:
     def binsearch(self,arr,k):
-        print(arr,k)
+        
         s,e=0,len(arr)-1
 
         while s<=e:
