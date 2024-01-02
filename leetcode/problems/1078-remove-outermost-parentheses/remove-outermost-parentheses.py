@@ -2,7 +2,6 @@ class Solution:
     def removeOuterParentheses(self, s: str) -> str:
         ans=""
         valpenC=0
-        maxval=0
         currval=""
 
         for i in range(len(s)):
