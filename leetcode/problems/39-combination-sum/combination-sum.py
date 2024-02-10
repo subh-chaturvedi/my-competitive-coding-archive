@@ -5,9 +5,10 @@ class Solution:
         def picker(curr):
             # print(curr)
             if sum(curr)>=target:
-                curr.sort()
-                if sum(curr)==target and curr not in ans:
-                    ans.append(curr)
+                if sum(curr)==target:
+                    curr.sort()
+                    if curr not in ans:
+                        ans.append(curr)
                 return
             
             for i in candidates:
