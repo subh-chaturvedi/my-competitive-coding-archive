@@ -11,8 +11,16 @@ class Solution:
                 res.append(combination)
                 return
             
-            for letter in phone[next_digits[0]]:
-                backtrack(combination + letter, next_digits[1:])
-        
+            #pick1
+            backtrack(combination+ phone[next_digits[0]][0], next_digits[1:])
+            #pick2
+            backtrack(combination+ phone[next_digits[0]][1], next_digits[1:])
+            #pick3
+            backtrack(combination+ phone[next_digits[0]][2], next_digits[1:])
+            #pick4
+            if next_digits[0] in ["7","9"]:
+                backtrack(combination+ phone[next_digits[0]][3], next_digits[1:])
+
+
         backtrack("", digits)
         return res
