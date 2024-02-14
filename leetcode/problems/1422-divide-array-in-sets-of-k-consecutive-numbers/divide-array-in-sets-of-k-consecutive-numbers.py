@@ -3,11 +3,14 @@ class Solution:
         if len(nums) % k != 0:
             return False
 
-        numsDict = defaultdict(int)
+        numsDict = {}
 
 
         for i in nums:
-            numsDict[i]+=1
+            if i in numsDict:
+                numsDict[i]+=1
+            else:
+                numsDict[i]=1
         numsLeft = len(nums)
 
         while numsLeft>0:
