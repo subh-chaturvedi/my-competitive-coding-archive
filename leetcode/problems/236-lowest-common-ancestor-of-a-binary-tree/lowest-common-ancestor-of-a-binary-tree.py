@@ -14,7 +14,7 @@ class Solution:
             
             l = dfs(root.left)
             r = dfs(root.right)
-            print(l,r, root.val)
+            # print(l,r, root.val)
             if root == p or root == q:
                 if l or r:
                     self.ans = root
