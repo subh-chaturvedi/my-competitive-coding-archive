@@ -20,8 +20,7 @@ class WordDictionary:
         curr.isEnd = True
 
     def search(self, word: str) -> bool:
-        def dfs(root,word):
-            curr = root
+        def dfs(curr,word):
 
             for c in range(len(word)):
                 if word[c] ==".":
