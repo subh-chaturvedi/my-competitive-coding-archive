@@ -6,8 +6,6 @@ class Solution:
             if rem==[]:
                 ans.append(curr)
                 return
-                
-            # print(rem,curr)
 
             #picked
             picker(curr+[rem[0]],rem[1:])
