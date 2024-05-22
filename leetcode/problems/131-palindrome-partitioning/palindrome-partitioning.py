@@ -1,5 +1,5 @@
 class Solution(object):
-    @cache  # the memory trick can save some time
+    # @cache  # the memory trick can save some time
     def partition(self, s):
         if not s: return [[]]
         ans = []
