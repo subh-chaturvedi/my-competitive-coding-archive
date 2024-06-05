@@ -1,6 +1,6 @@
 class Solution:
     def f(self, nums, i, dp):
-        print(i,nums)
+        # print(i,nums)
         if i<0:
             return 0
         
