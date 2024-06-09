@@ -5,7 +5,7 @@ class Solution:
         remsum=0
 
         for i,num in enumerate(nums):
-            print(i)
+            # print(i)
             remsum = (remsum+num)%k
 
             if remsum in cache:
