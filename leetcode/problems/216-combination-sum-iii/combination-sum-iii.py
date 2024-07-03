@@ -12,11 +12,11 @@ class Solution:
                 return
             if curr:
                 for i in range(curr[-1]+1,10):
-                    if s+i<=n and i not in curr:
+                    if s+i<=n:
                         f(curr+[i],s+i)
             else:
                 for i in range(1,10):
-                    if s+i<=n and i not in curr:
+                    if s+i<=n:
                         f(curr+[i],s+i)
         f([],0)
 
