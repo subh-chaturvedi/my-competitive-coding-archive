@@ -10,11 +10,14 @@ class Solution:
                 return
             if s>=n:
                 return
-            
-            for i in range(1,10):
-                if s+i<=n and i not in curr:
-                    f(curr+[i],s+i)
-                
+            if curr:
+                for i in range(curr[-1]+1,10):
+                    if s+i<=n and i not in curr:
+                        f(curr+[i],s+i)
+            else:
+                for i in range(1,10):
+                    if s+i<=n and i not in curr:
+                        f(curr+[i],s+i)
         f([],0)
 
         return ans
