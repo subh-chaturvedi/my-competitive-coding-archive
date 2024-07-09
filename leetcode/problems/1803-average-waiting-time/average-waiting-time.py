@@ -6,8 +6,8 @@ class Solution:
         ans  = 0
 
         for cust in customers:
-            if t<cust[0]:
-                t=cust[0]
+            
+            t=max(t,cust[0])
             
             t+=cust[1]
 
