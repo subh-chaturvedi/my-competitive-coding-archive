@@ -7,9 +7,8 @@ class Solution:
             if i == "../":
                 if pt>0:
                     pt-=1
-            elif i == "./":
-                continue
-            else:
+            elif i != "./":
+                
                 pt+=1
         
         return pt
