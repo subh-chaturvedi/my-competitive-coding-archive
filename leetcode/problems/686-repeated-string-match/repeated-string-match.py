@@ -1,18 +1,6 @@
 class Solution:
-    def repeatedStringMatch(self, a: str, b: str) -> int:
-        
-        newstr = ""
-        count = 0
-
-        if len(a)>len(b)*4:
-            newstr = a*2
-            if newstr.find(b) != -1:
-                return 2
-
-        while len(newstr)<=len(b)*2:
-            count+=1
-            newstr+=a
-            if newstr.find(b) != -1:
-                return count
-        
-        return -1
+    def repeatedStringMatch(self, A: str, B: str) -> int:
+    	if set(B).issubset(set(A)) == False: return -1
+    	for i in range(1,int(len(B)/len(A))+3):
+    		if B in A*i: return i
+    	return -1
