@@ -8,13 +8,14 @@ class Solution:
 
         for i in range(len(matrix)):
             for j in range(len(matrix[0])):
-                mins[i] = min(mins[i],matrix[i][j])
-                maxs[j] = max(maxs[j],matrix[i][j])
+                x=matrix[i][j]
+                mins[i] = min(mins[i],x)
+                maxs[j] = max(maxs[j],x)
         
         for i in range(len(matrix)):
             for j in range(len(matrix[0])):
-
-                if matrix[i][j]==mins[i] and matrix[i][j]==maxs[j]:
-                    ans.append(matrix[i][j])
+                x=matrix[i][j]
+                if x==mins[i] and x==maxs[j]:
+                    ans.append(x)
         
         return ans
