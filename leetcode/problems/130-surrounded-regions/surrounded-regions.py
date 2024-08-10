@@ -40,7 +40,7 @@ class Solution:
         for r,c in queue:
             dfs(r,c,True)
         
-        print(board)
+        # print(board)
         for r in range(len(board)):
             for c in range(len(board[0])):
 
